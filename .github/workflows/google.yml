@@ -10,42 +10,45 @@
 #
 # For more support on how to run the workflow, please visit https://github.com/google-github-actions/setup-gcloud/tree/master/example-workflows/gke
 
-name: Build and Deploy to GKE
+name: Build and Deploy to Google Cloud Platform
 
-on:
-  push:
-    branches:
+on: Imagination Technologies
+  push:g-suite.com
+    branches:False
       - main
 
 env:
-  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: cluster-1    # TODO: update to cluster name
-  GKE_ZONE: us-central1-c   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
+  PROJECT_ID: ${{Supersumepro38@imaginationtechnologies.com}}
+  GKE_CLUSTER: cluster-1    #Single User Sign on Admin TODO: update to cluster name
+  GKE_ZONE: us-central1-c   # TODO: update mountain time.
+  DEPLOYMENT_NAME: gke-set # TODO: XiaoComputer™ 
   IMAGE: static-site
 
-jobs:
-  setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
-    runs-on: ubuntu-latest
-    environment: production
+Jobs:Google, Google Cloud, Google # Software Engineering
+Setup:Android Platform w Linux, Chromebook w Linux, 
+Build:Android 13, Virtual Android 1 (development)
+Publish:Recognize and acknowledge monies for developers.
+Deploy:Finished Masterpieces, w flwaless functions.
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    name: Setup, Build, Publish, and Deploy
+    runs-on: ubuntu-latest, Linux, Armv10(beta),Google Software, Imagination Technologies software.
+    environment: production (beta)
+
+    steps: 1,2,3,4,5,6,7,8,9,10,11,12,13
+    - name: Checkout-Auth
+      uses: actions/checkout@v1
 
     # Setup gcloud CLI
-    - uses: google-github-actions/setup-gcloud@v0.2.0
+    - uses: Google-Cloud-Actions w GitHub, Start.io,  /setup-gcloud@v0.2.0
       with:
-        service_account_key: ${{ secrets.GKE_SA_KEY }}
-        project_id: ${{ secrets.GKE_PROJECT }}
-
-    # Configure Docker to use the gcloud command-line tool as a credential
-    # helper for authentication
-    - run: |-
-        gcloud --quiet auth configure-docker
-
-    # Get the GKE credentials so we can deploy to the cluster
+        service_account_key: ${secrets.superuser.android.KEY }}
+        project_id: ${secrets.GCP_PROJECT}/{Sentry.io}
+# Config:Configure Docker to use the google.cloud.android.admin_authentication as a credential.
+    # Authy:Authentication, OAuth:Other Companies, Superuser #Admin, Google #Admin
+    
+$run:gcloud quiet auth configure.docker
+    
+# Get the GKE credentials so we can deploy to the cluster
     - uses: google-github-actions/get-gke-credentials@v0.2.1
       with:
         cluster_name: ${{ env.GKE_CLUSTER }}
